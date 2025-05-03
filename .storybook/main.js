@@ -1,5 +1,3 @@
-
-
 /** @type { import('@storybook/react-vite').StorybookConfig } */
 const config = {
   "stories": [
@@ -19,6 +17,13 @@ const config = {
   "framework": {
     "name": "@storybook/react-vite",
     "options": {}
+  },
+  viteFinal: (config) => {
+    // Add base path for GitHub Pages
+    if (globalThis.process?.env.NODE_ENV === 'production') {
+      config.base = '/brandy-react/';
+    }
+    return config;
   }
 };
 export default config;

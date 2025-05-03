@@ -12,7 +12,7 @@ const Header = ({ logoSrc }) => {
             <div className="right-header">
                 <div className="search-div">
                     <div className="search-input-wrapper">
-                        <img src={searchIcon} alt="Search" className="search-icon" />
+                        <img src="/assets/search-icon.svg" alt="Search" className="search-icon" />
                         <input type="text" placeholder="Search..." className="search-input" />
                         <span className="shortcut">/⌘K</span>
                     </div>
